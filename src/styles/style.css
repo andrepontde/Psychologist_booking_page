@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+
 body{
     background-color: #1b1b1b;
     color: white;
@@ -5,16 +8,16 @@ body{
 
 #intro{
     width: 100%;
-    height: 700px;
+    height: 1000px;
     display: flex;
     background-image: url("../images/zen-nandhukumar3.jpg");
     /* background-position: center; */
     background-repeat: no-repeat;
     background-size:cover;
     background-color: #1b1b1b;
-    align-items: end;
+    align-items: center;
     align-content: center;
-    font-family: 'Merriweather Sans', sans-serif;
+    font-family: 'Oswald', serif;
 }
 
 
@@ -24,22 +27,31 @@ body{
     margin-bottom: 80px;
     margin-right: 600px;
     width: 10%;
-    
     padding: 30px;
     padding-left: 140px;
-    background-color: #1b1b1b;
+    /* background-color: #1b1b1b; */
+    font-family: 'Open Sans', sans-serif;
+    /* line-height: 45px; */
+    font-size: 25px;
 }
 
-#intro h1{
-    font-size: 55px;    
+#intro span{
+    font-size: 95px;
+    font-weight: 500;
+    /* letter-spacing: -3px;     */
+    line-height: 100px;
+    font-family: 'Oswald', serif;
 }
+
 
 #intro h3{
+    
     font-size: 30px;
+    font-weight: 100;
 }
 
 .middle{
-    height: 160px;
+    height: 190px;
     background-color: #504e4e;
     text-align: center;
     align-content:center;
@@ -48,3 +60,27 @@ body{
 .middle h3{
     font-size: 30px;
 }
+
+#services{
+    width: 80%;
+    height: 400px;
+    background-color: #1b1b1b;
+    justify-self: center;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+#services-container{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+
+}
+
+.service{
+    margin: 60px;
+    width: 30%;
+    background-color: gray;
+}
+
+
