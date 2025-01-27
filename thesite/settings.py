@@ -118,8 +118,12 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+#Adding "namespaced" static files to be able to have more flexibility for other pages and javaScript files
+
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')
+    os.path.join(BASE_DIR, 'static'),
+    ("bookings_app", os.path.join(BASE_DIR, 'bookings', 'static')),
+    ("tests_app", os.path.join(BASE_DIR, 'bookings', 'static'))
 ]
 
 # Default primary key field type
