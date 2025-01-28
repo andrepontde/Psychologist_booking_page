@@ -118,12 +118,17 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-#Adding "namespaced" static files to be able to have more flexibility for other pages and javaScript files
+    #Turns out, this dir will always check any dir with the name static, you just have to specify which you are using if you need a specific one
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-    ("bookings_app", os.path.join(BASE_DIR, 'bookings', 'static')),
-    ("tests_app", os.path.join(BASE_DIR, 'bookings', 'static'))
+    BASE_DIR / 'static',
+    
+    # BASE_DIR/ 'bookings' / 'static',
+    # BASE_DIR/ 'psy_test' / 'static',
+    
+    # os.path.join(BASE_DIR, 'static'),
+#     ("bookings_app", os.path.join(BASE_DIR, 'bookings', 'static')),
+#     ("tests_app", os.path.join(BASE_DIR, 'bookings', 'static'))
 ]
 
 # Default primary key field type
