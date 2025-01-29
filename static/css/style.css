@@ -1,65 +1,72 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+/* Root colors  */
+:root {
+    --primary: #8D6E63;
+    --secondary: #F9F9F9;
+    --tertiary: #A8B5A0;
+    --text-dark: #4A3B34;
+    --text-light: #FFFFFF;
+    --accent: #5A7262;
 
+  }
 
 body{
-    background-color: #1b1b1b;
-    color: white;
-}
+    background-color:var(--secondary);
+    color: var(--text-dark);
+    font-family:'Oswald', sans-serif;
 
-#intro{
-    width: 100%;
-    height: 1000px;
+    margin: 0;
+
+
+    /* background-image: url("../images/zen-nandhukumar3.jpg"); */
+}
+#container{
     display: flex;
-    background-image: url("../images/zen-nandhukumar3.jpg");
-    /* background-position: center; */
-    background-repeat: no-repeat;
-    background-size:cover;
-    background-color: #1b1b1b;
-    align-items: center;
-    align-content: center;
-    font-family: 'Oswald', serif;
+    width:100vw;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
 }
-
-
-#intro div{
-    flex: 1;
-    /* margin-left: 100px; */
-    margin-bottom: 80px;
-    margin-right: 600px;
-    width: 10%;
-    padding: 30px;
-    padding-left: 140px;
-    /* background-color: #1b1b1b; */
-    font-family: 'Open Sans', sans-serif;
-    /* line-height: 45px; */
-    font-size: 25px;
+#mainHero{
+    display: flex;
+    justify-content: space-around;
 }
-
-#intro span{
+#mainHeroLeft h2{
     font-size: 95px;
-    font-weight: 500;
+    font-weight: 700;
     /* letter-spacing: -3px;     */
-    line-height: 100px;
-    font-family: 'Oswald', serif;
+    line-height: 89px;
+    margin-bottom:10px;
+
+
 }
+#mainSubText{
+    font-size:30px;
+    font-style: italic;
+    margin:0;
 
-
-#intro h3{
-    
+}
+#mainHeroLeft h3{
     font-size: 30px;
-    font-weight: 100;
-}
+    font-style: italic;
 
-.middle{
-    height: 190px;
-    background-color: #504e4e;
+}
+#mainQuote{
+    background-color :var(--primary);
+    color: var(--text-light);
     text-align: center;
-    align-content:center;
+    font-family:'Inter',serif;
+    font-weight: 200;
+    font-style: italic;
+}
+#mainQuote h3{
+    font-size: 50px;
+}
+#mainQuote p{
+   font-size:25px;
 }
 
-.middle h3{
-    font-size: 30px;
-}
 
 #services{
     width: 80%;
@@ -81,6 +88,25 @@ body{
     margin: 60px;
     width: 30%;
     background-color: gray;
+}
+/* Jordan Styling */
+#navContainer{
+    display:flex;
+    justify-content: flex-end;
+    width: 90vw;
+}
+#navItems ul{
+    display:flex;
+    justify-content: space-between;
+    gap:28px;
+    list-style: none;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--accent);
+}
+ a{
+    text-decoration: none;
+    color:inherit;
 }
 
 

@@ -5,20 +5,24 @@
 {% endblock %}
 
 {% block content %}
-<div class="container">
-
-    <div id="intro">
-        <div>
-            <span>DANIEL <br> CAMACHO </span><br>
-            Maestro en psicologia aplicada
+<div id="container">
+    <div id="mainHero">
+        <div id="mainHeroLeft">
+            <h2>DANIEL<br>CAMACHO</h2>
+            <p id="mainSubText">Maestro En Psicologia Aplicada</p>
             <h3>Terapia online</h3>
+        </div>
+        <div id="mainHeroRight">
+            <img src="../static/images/danielCamachoLogo.png" alt="Main Logo">
         </div>
     </div>
 
+
     <!-- Middle Div - between intro and brief explanation of what is offered -->
-    <div class="middle">
-        <h3>Ahora más que nunca, estamos contigo.</h3>
-    </div>    
+    <div id="mainQuote">
+        <h3>"La felicidad de tu vida depende de la calidad de tus pensamientos."</h3>
+        <p>- Marco Aurelio</p>
+    </div>
 
     <div id="services">
         <h1>Servicios</h1>
@@ -49,7 +53,8 @@
     </div>
 
     <div>
-        <div><h1>Encuentra la ayuda que necesitas</h1><button><a href="contact.html">contactanos</a></button></div>
+        <div><h1>Encuentra la ayuda que necesitas</h1>
+            <a href="contact.html"><button>contactanos</button></a>
     </div>
 
     <div>
@@ -58,4 +63,5 @@
             <p>Daniel es un psicólogo con más de 10 años de experiencia en el campo de la psicología clínica y la investigación. Ha trabajado con personas de todas las edades y ha ayudado a cientos de personas a superar problemas emocionales y psicológicos. Daniel es un apasionado de su trabajo y se dedica a ayudar a las personas a vivir una vida más plena y feliz.</p>
         </div>
     </div>
+</div>
 {% endblock %}

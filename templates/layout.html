@@ -3,51 +3,56 @@
 {% load static %}
 
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        {% block title %}
-            Django App
-        {% endblock %}
-    </title>
-    {% comment %} This loads this CSS without an issue because it is targetting the BASE static file {% endcomment %}
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %} Django App {% endblock %}</title>
+    {% comment %} This loads this CSS without an issue because it is targetting
+    the BASE static file {% endcomment %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
 
-    {% comment %} <script src="{% static 'js/main.js' %}" defer></script> {% endcomment %}
-    {% comment %} <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Space+Grotesk:wght@300&display=swap" rel="stylesheet"> {% endcomment %}
-
-    {% block extra_head %}{% endblock %}
-</head>
-<body>
-    <nav>
-        <a href="/">🏠</a>
-    </nav>
-
-    <main>
-        {% block content %}
-        {% endblock %}
-    </main>
+    {% comment %}
+    <script src="{% static 'js/main.js' %}" defer></script>
+    {% endcomment %} {% comment %}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Space+Grotesk:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    {% endcomment %} {% block extra_head %}{% endblock %}
+  </head>
+  <body>
+   <nav>
+    <div id="navContainer">
+      <div id="navItems">
+      <ul>
+        <li><a href="/home">Home</a></li>
+        <li><a href="/book">Bookings</a></li>
+        <li><a href="/about">About</a></li>
+        {% comment %} <a href="/">🏠</a> {% endcomment %}
+      </div>
+    </div>
+  </nav>
+    <main>{% block content %} {% endblock %}</main>
 
     <footer>
-        <div>
-            <p>&copy; 2023 Daniel Camacho. Todos los derechos reservados.</p>
-        </div>
-        <div>
-            <ul>
-                <li><a href="privacy.html">Política de Privacidad</a></li>
-                <li><a href="terms.html">Términos y Condiciones</a></li>
-                <li><a href="contact.html">Contacto</a></li>
-            </ul>
-        </div>
-        <div>
-            <p>Síguenos en:</p>
-            <a href="https://www.facebook.com" target="_blank">Facebook</a> |
-            <a href="https://www.twitter.com" target="_blank">Twitter</a> |
-            <a href="https://www.instagram.com" target="_blank">Instagram</a>
-        </div>
+      <div>
+        <p>&copy; 2023 Daniel Camacho. Todos los derechos reservados.</p>
+      </div>
+      <div>
+        <ul>
+          <li><a href="privacy.html">Política de Privacidad</a></li>
+          <li><a href="terms.html">Términos y Condiciones</a></li>
+          <li><a href="contact.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <p>Síguenos en:</p>
+        <a href="https://www.facebook.com" target="_blank">Facebook</a> |
+        <a href="https://www.twitter.com" target="_blank">Twitter</a> |
+        <a href="https://www.instagram.com" target="_blank">Instagram</a>
+      </div>
     </footer>
-</body>
+  </body>
 </html>
