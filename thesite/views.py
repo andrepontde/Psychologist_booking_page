@@ -5,3 +5,5 @@ def homepage(request):
 
 def bookings(request):
     return render(request, "bookings.html")
+def about(request):
+    return render(request, "about.html")
